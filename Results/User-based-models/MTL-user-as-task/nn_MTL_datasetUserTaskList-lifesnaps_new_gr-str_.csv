@@ -1,0 +1,5 @@
+,hidden_layers,l2_beta,learning_rate,dropout,decay,decay_steps,decay_rate,batch_size,optimizer,val_acc,val_auc,val_f1,val_precision,val_recall,train_nan_percent,val_nan_percent
+0,"[50, 50]",0.01,0.01,True,True,1000,0.95,64,<class 'tensorflow.python.training.adam.AdamOptimizer'>,0.5227784997994384,0.4883027348628123,0.1617493721159167,0.1006379962021555,0.4409067189851069,0.0,0.0
+1,"[50, 50]",0.01,0.01,False,True,1000,0.95,64,<class 'tensorflow.python.training.adam.AdamOptimizer'>,0.5586004011231448,0.5127037171383112,0.1820576758467261,0.11509662146932569,0.45249349051724846,0.0,0.0
+2,"[50, 50]",0.0001,0.01,True,True,1000,0.95,64,<class 'tensorflow.python.training.adam.AdamOptimizer'>,0.5522400320898516,0.49255382026340977,0.1670663165485596,0.10642892127903487,0.41592328712380044,0.0,0.0
+3,"[50, 50]",0.0001,0.01,False,True,1000,0.95,64,<class 'tensorflow.python.training.adam.AdamOptimizer'>,0.5009750501403931,0.48474100423501126,0.17006753851448986,0.1043755231971073,0.46409111962608957,0.0,0.0
