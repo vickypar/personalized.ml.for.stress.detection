@@ -10,7 +10,7 @@ This project is my Thesis for the fulfilment of MSc Data and Web Science, School
 
 [2. Data](https://github.com/vickypar/personalized_ml_for_stress_prediction#2-data)
 
-[3. Methodology & Models](https://github.com/vickypar/personalized_ml_for_stress_prediction#3-methodology-&-models)
+[3. Methodology and Models](https://github.com/vickypar/personalized_ml_for_stress_prediction#3-methodology-and-models)
 
 [4. Evaluation](https://github.com/vickypar/personalized_ml_for_stress_prediction#4-evaluation)
 
@@ -19,7 +19,7 @@ This thesis investigates the feasibility of stress detection using physiological
 
 ## 1. Installation
 ## 2. Data
-## 3. Methodology & Models
+## 3. Methodology and Models
 
 ### 3.1 Generic Models
 ### 3.2 User-based Models 
