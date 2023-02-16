@@ -66,13 +66,33 @@ Finally, in order to address the possibility of users belonging to multiple clus
 The application of fuzzy clustering is illustrated in the Figures below which display the membership degrees of users from one of the datasets, both numerically and visually through color intensity. For instance, the participant with ID "0" has a 1.9% membership to cluster 0, 7.9% to cluster 1, 56% to cluster 2, etc. To implement the machine learning and deep learning approaches, the instances of each user are split based on their membership degrees to each cluster. This means that 1.9% of participant's with ID "0" instances will be assigned to cluster's 0 data, 56% to cluster's 2 data, and so on.
 Next, two methods are applied to the resulting groups.
 
+<div align="center">
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/95586847/219320720-746cf624-eda8-43e1-9689-ef9ace706be9.png" width="400"></td>
-    <td><img src="https://user-images.githubusercontent.com/95586847/219320851-717ad1ba-2b55-4024-ae58-2377d394ddc6.png" width="400"></td>
+    <td align="center"><img src="https://user-images.githubusercontent.com/95586847/219320720-746cf624-eda8-43e1-9689-ef9ace706be9.png" width="400"></td>
+    <td align="center"><img src="https://user-images.githubusercontent.com/95586847/219320851-717ad1ba-2b55-4024-ae58-2377d394ddc6.png" width="400"></td>
   </tr>
 </table>
+</div>
 
 The first approach involves training multiple machine learning algorithms on the data of each group and select the one that performs best. The algorithms tested are the same as those used in the generic approach. We evaluate the approach by computing the average F1-Score across all groups. In the deep learning approach, we implement MTL and treat the **detection of stress in a fuzzy group as a task**. 
 
 ## 4. Evaluation
+The **"F1-Score"** was selected as the most appropriate evaluation metric for the stress detection models, as two out of the four datasets are imbalanced (ADARP and LifeSnaps). Thus, the following barplots present the F1-Score of the machine learning and the deep learning approaches.
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/95586847/219374497-2fc131c1-ce57-4b3b-9adf-5466b2755778.png" width="800" align="center">
+</p>
+
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/95586847/219374943-ba67bf30-cf1b-44a4-be8d-612d4d8fc262.png" width="800" align="center">
+</p>
+
+The following points summarize the key findings of this study.
+
+- **The Importance of Personalization.** The results showed that the user-based models outperformed the generic ones, confirming the crucial role of personalization in stress detection.
+- **Superior Performance of Multi-Attribute-Based Models.** Our results indicated that the multi-attribute-based models yielded the best performance, both in the case of machine learning and in the case of deep learning approaches. The only exception was the WESAD dataset, where the generic model with participant ID achieved the highest F1-Score (0.9984), with a negligible 0.24% difference from the multi-attribute splitting performance.
+- **The Benefits of Multitask Learning.** In the deep learning approach, the "MTL Multi-Attribute-Group-As-Task" improved the F1-Score by **0.88-158.7%** compared to the "Single Task Learning" models.
+- **The Impact of the Number of Participants.** Our results showed that the improvement of personalized models’ performance over the generic ones was dramatically higher in the LifeSnaps dataset compared to the other three datasets. This was probably due to the fact that this dataset had a larger number of participants (71), which facilitated the grouping of similar individuals.
+- **The Impact of Dataset Size.** The results indicated that the machine learning approaches performed better than the deep learning ones, which was attributed to the limited size of the datasets. 
+- **The Influence of Data Collection Environment.** The results showed that the performance of the stress detection system was higher in datasets that were collected in a lab setting than in the ones that have been created in a real-world environment (in-the-wild). This was expected as stress detection is more challenging in uncontrolled environments where individuals' movements are unrestricted and their context is unknown, and unsupervised participants may wear smartwatches improperly, leading to tampered measurements.
