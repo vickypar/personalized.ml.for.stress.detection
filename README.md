@@ -1,7 +1,5 @@
 # Personalized Machine Learning Benchmarking for Stress Detection
 
-This project is my Thesis for the fulfilment of MSc Data and Web Science, School of Informatics, Aristotle University of Thessaloniki.
-
 ## Table of Contents
 
 [0. Abstract](https://github.com/vickypar/personalized_ml_for_stress_prediction#0-abstract)
